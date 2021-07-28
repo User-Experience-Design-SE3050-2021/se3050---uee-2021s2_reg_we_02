@@ -8,6 +8,8 @@ App Info: "**enna.lk**" Buying and Selling Mobile Application. -
 
 Group Members:
 
-IT19004778 - W.G.M.S.Wickramarathna ,
-IT19006994 - K.H.K.L.De Silva , 
+IT19004778 - W.G.M.S.Wickramarathna 
+
+IT19006994 - K.H.K.L.De Silva 
+
 IT19111766 - Lekamalage U.L.V.M.
