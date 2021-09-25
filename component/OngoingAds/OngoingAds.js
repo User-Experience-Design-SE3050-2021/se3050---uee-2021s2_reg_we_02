@@ -45,13 +45,13 @@ export default function OngoingAds({navigation}){
                         <View style={styles.adInputView}>
                             <View style={styles.categoryRow}>
                                 <Image style={styles.image2} source={require("../../assets/images/land.jpg")} />
-                                <View style={styles.adDetails}>
+                                <View style={styles.adDetailsImage2}>
                                     <Text>Land for Sale In Malabe</Text>
                                     <Text>Rs.8,000,000/-</Text>
                                     <Text>45</Text>
                                 </View>
                                 <View style={styles.adButtons}>
-                                    <Icon name="edit" size={30} style={styles.editIcon}/>
+                                    <Icon name="edit" size={30} style={styles.editIconImage2}/>
                                     <Icon name="trash" size={30} style={styles.deleteIcon}/>
                                 </View>
                             </View>

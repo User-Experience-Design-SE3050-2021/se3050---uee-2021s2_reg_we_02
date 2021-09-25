@@ -10,23 +10,21 @@ const styles = StyleSheet.create({
     },
     container2: {
         backgroundColor: "#FFFFFF",
-        height: 670,
+        height: 740,
         width: '100%',
         paddingBottom: 50,
-
-
     },
     container3: {
         marginTop: '1%',
         backgroundColor: "#F2E8E8",
-        height: '90%',
+        height: '80%',
         marginLeft: 10,
         marginRight: 10,
         borderTopEndRadius : 50,
         borderTopStartRadius : 50,
         borderBottomRightRadius: 50,
         borderBottomLeftRadius: 50,
-        paddingBottom:20
+        paddingBottom:30
 
     },
     inputView: {
@@ -36,8 +34,8 @@ const styles = StyleSheet.create({
         height: 45,
         marginBottom: 5,
         marginTop: 10,
-        marginLeft: 70,
-        marginRight: 10
+        marginLeft: 40,
+        marginRight: 20
     },
     inputTitle: {
         marginTop: 5,
@@ -88,7 +86,7 @@ const styles = StyleSheet.create({
         alignContent: "flex-start",
         marginBottom: 5,
         marginTop: 10,
-        marginLeft: 10,
+        marginLeft: 20,
         color: '#F79605',
 
     },
@@ -112,7 +110,7 @@ const styles = StyleSheet.create({
     subHeading: {
         fontSize:15,
         marginLeft: 10,
-        marginBottom: 5,
+        marginBottom: 10,
         fontWeight : "bold"
     },
     categoryHeading: {
@@ -181,7 +179,7 @@ const styles = StyleSheet.create({
         color: '#F79605'
     },
     userIcon: {
-        marginLeft: 140,
+        marginLeft: 100,
         color: "#024F85"
     },
     postText: {
