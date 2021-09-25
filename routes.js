@@ -8,6 +8,7 @@ import CategoryView from "./component/CategoryView/CategoryView";
 import NewAdvertisement1 from "./component/NewAdvertisementInterface1/NewAdvertisement";
 import NewAdvertisement2 from "./component/NewAdvertisementInterface2/NewAdvertisement2";
 import OngoingAds from "./component/OngoingAds/OngoingAds";
+import UpdateAdvertisement from "./component/UpdateAdvertisementInterface1/UpdateAdvertisement";
 const screens = {
     DashBoard: {
         screen: DashBoard,
@@ -53,6 +54,12 @@ const screens = {
     },
     OngoingAds: {
         screen: OngoingAds,
+        navigationOptions: {
+            title: 'Enna.lk',
+        }
+    },
+    UpdateAdvertisement: {
+        screen: UpdateAdvertisement,
         navigationOptions: {
             title: 'Enna.lk',
         }
