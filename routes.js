@@ -7,6 +7,7 @@ import ItemView from './component/ItemView/index';
 import CategoryView from "./component/CategoryView/CategoryView";
 import NewAdvertisement1 from "./component/NewAdvertisementInterface1/NewAdvertisement";
 import NewAdvertisement2 from "./component/NewAdvertisementInterface2/NewAdvertisement2";
+import OngoingAds from "./component/OngoingAds/OngoingAds";
 const screens = {
     DashBoard: {
         screen: DashBoard,
@@ -49,7 +50,14 @@ const screens = {
         navigationOptions: {
             title: 'Enna.lk',
         }
+    },
+    OngoingAds: {
+        screen: OngoingAds,
+        navigationOptions: {
+            title: 'Enna.lk',
+        }
     }
+
 
 };
 
