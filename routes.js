@@ -9,6 +9,7 @@ import NewAdvertisement1 from "./component/NewAdvertisementInterface1/NewAdverti
 import NewAdvertisement2 from "./component/NewAdvertisementInterface2/NewAdvertisement2";
 import OngoingAds from "./component/OngoingAds/OngoingAds";
 import UpdateAdvertisement from "./component/UpdateAdvertisementInterface1/UpdateAdvertisement";
+import UpdateAdvertisement2 from "./component/UpdateAdvertisementInterface2/UpdateAdvertisement2";
 const screens = {
     DashBoard: {
         screen: DashBoard,
@@ -60,6 +61,12 @@ const screens = {
     },
     UpdateAdvertisement: {
         screen: UpdateAdvertisement,
+        navigationOptions: {
+            title: 'Enna.lk',
+        }
+    },
+    UpdateAdvertisement2: {
+        screen: UpdateAdvertisement2,
         navigationOptions: {
             title: 'Enna.lk',
         }
