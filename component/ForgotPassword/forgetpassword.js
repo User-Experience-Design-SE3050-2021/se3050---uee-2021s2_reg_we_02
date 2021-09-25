@@ -12,25 +12,23 @@ import { Button } from 'react-native-paper'
 export default function forgot({ navigation }) {
   const [Email, onChangeEmail] = React.useState(null)
 
-  const policies = () => {
-    navigation.push('Policies')
-  }
+  
 
   return (
     <View style={styles.container}>
       <View style={styles.logoContainer}>
-        <Text style={styles.welcomeText} onPress={policies}>
+        <Text style={styles.welcomeText}>
           Forget Password ?
         </Text>
         <Image
-          source={require('../forgotpassword.png')}
+          source={require('../../forgotpassword.png')}
           style={styles.logo}
         ></Image>
       </View>
 
       <View style={styles.BackgroungContainer}>
         <ImageBackground
-          source={require('../Capture.png')}
+          source={require('../../Capture.png')}
           style={styles.Backgroundimage}
         >
           <View style={styles.topic}>
@@ -86,6 +84,7 @@ const styles = StyleSheet.create({
     color: '#024F85',
   },
   Backgroundimage: {
+    marginTop: 200,
     width: '100%',
     height: '100%',
   },
@@ -96,7 +95,7 @@ const styles = StyleSheet.create({
     borderRadius: 40,
   },
   topic: {
-    marginTop: 260,
+    marginTop: 50,
     marginLeft: '10%',
     marginRight: '10%',
   },

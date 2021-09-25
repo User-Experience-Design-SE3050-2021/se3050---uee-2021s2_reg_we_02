@@ -13,12 +13,12 @@ export default function contactUs() {
     <View style={styles.container}>
       <View style={styles.logoContainer}>
         <Text style={styles.welcomeText}>Contact Us</Text>
-        <Image source={require('../contactus.png')} style={styles.logo}></Image>
+        <Image source={require('../../contactus.png')} style={styles.logo}></Image>
       </View>
 
       <View style={styles.BackgroungContainer}>
         <ImageBackground
-          source={require('../Capture.png')}
+          source={require('../../Capture.png')}
           style={styles.Backgroundimage}
         >
           <View style={styles.topic}>
@@ -29,7 +29,7 @@ export default function contactUs() {
           </View>
           <View style={styles.contactusview}>
             <Image
-              source={require('../facebook.png')}
+              source={require('../../facebook.png')}
               style={styles.contact}
             ></Image>
             <Text
@@ -41,7 +41,7 @@ export default function contactUs() {
               Find Us On Facebook
             </Text>
             <Image
-              source={require('../email.png')}
+              source={require('../../email.png')}
               style={styles.contact}
             ></Image>
             <Text style={styles.context} onPress={() => {
@@ -76,6 +76,7 @@ const styles = StyleSheet.create({
     color: '#024F85',
   },
   Backgroundimage: {
+    marginTop: 200,
     width: '100%',
     height: '100%',
   },
@@ -86,7 +87,7 @@ const styles = StyleSheet.create({
     borderRadius: 40,
   },
   topic: {
-    marginTop: 240,
+    marginTop: 50,
     marginLeft: '10%',
     marginRight: '10%',
   },

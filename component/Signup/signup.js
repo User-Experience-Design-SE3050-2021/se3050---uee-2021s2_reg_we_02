@@ -18,12 +18,12 @@ export default function signup({navigation}) {
     <View style={styles.container}>
       <View style={styles.logoContainer}>
         <Text style={styles.welcomeText}>Create Account !</Text>
-        <Image source={require('../signup.png')} style={styles.logo}></Image>
+        <Image source={require('../../signup.png')} style={styles.logo}></Image>
       </View>
 
       <View style={styles.BackgroungContainer}>
         <ImageBackground
-          source={require('../Capture.png')}
+          source={require('../../Capture.png')}
           style={styles.Backgroundimage}
         >
           <View style={styles.topic}>
@@ -92,6 +92,7 @@ const styles = StyleSheet.create({
     color: '#024F85',
   },
   Backgroundimage: {
+    marginTop: 200,
     width: '100%',
     height: '100%',
   },
@@ -102,7 +103,7 @@ const styles = StyleSheet.create({
     borderRadius: 40,
   },
   topic: {
-    marginTop: 245,
+    marginTop: 45,
     marginLeft: '10%',
     marginRight: '10%',
   },

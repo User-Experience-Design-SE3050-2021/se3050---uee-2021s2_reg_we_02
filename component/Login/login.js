@@ -20,20 +20,20 @@ export default function login({navigation}) {
   const signup = () => {
     navigation.push('Signup');
   }
-  const contactus = () => {
-    navigation.push('contactus');
+  const DashBoard = () => {
+    navigation.push('DashBoard');
   }
   
 
   return (
     <View style={styles.container}>
       <View style={styles.logoContainer}>
-        <Text style={styles.welcomeText} onPress={contactus}>Welcome !</Text>
-        <Image source={require("../logo.jpg")} style={styles.mainlogo}></Image>
+        <Text style={styles.welcomeText}>Welcome !</Text>
+        <Image source={require('../../mainlogo.jpg')} style={styles.mainlogo}></Image>
       </View>
       <View style={styles.BackgroungContainer}>
         <ImageBackground
-          source={require('../Capture.png')}
+          source={require('../../Capture.png')}
           style={styles.Backgroundimage}
         >
           <TextInput
@@ -55,7 +55,7 @@ export default function login({navigation}) {
               compact="true"
               color="#fff"
               mode="contained"
-              onPress={() => console.log('Pressed')}
+              onPress={DashBoard}
             >
               LOG IN
             </Button>
@@ -103,6 +103,7 @@ const styles = StyleSheet.create({
     color: '#024F85',
   },
   Backgroundimage: {
+    marginTop: 200,
     width: '100%',
     height: '100%',
   },
@@ -114,7 +115,7 @@ const styles = StyleSheet.create({
   },
   input1: {
     zIndex: 1,
-    marginTop: 230,
+    marginTop: 50,
     fontSize: 20,
     backgroundColor: '#97D2FC',
     fontStyle: 'italic',
