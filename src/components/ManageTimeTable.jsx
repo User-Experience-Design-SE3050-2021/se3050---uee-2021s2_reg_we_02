@@ -31,7 +31,16 @@ class ManageTimeTable extends Component {
                             <small>Welcome back, Andrew</small>
                         </div>
                         <div className="col-sm-6">
-
+                            <div className={"row"}>
+                                <div className={"headerDetails col-sm-8"}>
+                                    <img className={"userImage"} src={user}/>
+                                    <br/>
+                                    admin
+                                </div>
+                                <div className={"col-sm-4"}>
+                                    <small>Andrew Johnstons</small>
+                                </div>
+                            </div>
                             <div className={"row"}>
                                 <div className={"headerDetails col-sm-6"}>
                                     <button className={"btn btn-success"}><i className="fas fa-plus"></i> &nbsp;Add Uint</button>
