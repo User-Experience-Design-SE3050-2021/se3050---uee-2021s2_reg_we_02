@@ -15,6 +15,9 @@ export default function Index({navigation}){
         console.log("sfsd");
         navigation.push('ItemView');
     }
+    const AddAdvertisement =() =>{
+        navigation.push('CategoryView');
+    }
     return(
         <View style={styles.indexContainer}>
             <ScrollView>
@@ -138,7 +141,8 @@ export default function Index({navigation}){
                     <Icon
                         name="plus" size={40}
                         style={styles.footerIconMiddle}
-                        onPress={profile}
+                        onPress={AddAdvertisement
+                        }
                     />
                 </View>
                 <Icon
