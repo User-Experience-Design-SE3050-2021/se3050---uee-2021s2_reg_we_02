@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
     },
     container2: {
         backgroundColor: "#FFFFFF",
-        height: 670,
+        height: 740,
         width: '100%',
         paddingBottom: 50,
 
@@ -37,8 +37,8 @@ const styles = StyleSheet.create({
         height: 45,
         marginBottom: 5,
         marginTop: 10,
-        marginLeft: 70,
-        marginRight: 10
+        marginLeft: 40,
+        marginRight: 20
     },
     inputTitle: {
         marginTop: 5,
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
         alignContent: "flex-start",
         marginBottom: 5,
         marginTop: 10,
-        marginLeft: 10,
+        marginLeft: 20,
         color: '#F79605',
 
     },
@@ -139,6 +139,7 @@ const styles = StyleSheet.create({
     },
     numberSlider: {
         marginTop: 5,
+
         flexDirection: 'row',
         alignItems: "center",
         backgroundColor: '#FFFFFF',
@@ -154,7 +155,7 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         paddingRight: 10,
         paddingLeft: 10,
-        borderWidth: 2
+        borderWidth: 2,
     },
     numberSliderTwo: {
         marginLeft: '7%',
@@ -177,7 +178,7 @@ const styles = StyleSheet.create({
 
     },
     bottomNavBar: {
-        marginTop: 5,
+        marginTop: 10,
         flexDirection: 'row',
         alignItems: "center",
         backgroundColor: "#F2E8E8",
@@ -193,7 +194,7 @@ const styles = StyleSheet.create({
         color: '#F79605'
     },
     userIcon: {
-        marginLeft: 140,
+        marginLeft: 100,
         color: "#024F85"
     }
 

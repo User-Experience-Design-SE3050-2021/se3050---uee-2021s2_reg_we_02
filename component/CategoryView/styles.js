@@ -131,7 +131,7 @@ const styles = StyleSheet.create({
 
     },
     bottomNavBar: {
-        marginTop: 5,
+        marginTop: 10,
         flexDirection: 'row',
         alignItems: "center",
         backgroundColor: "#F2E8E8",
@@ -147,7 +147,7 @@ const styles = StyleSheet.create({
         color: '#F79605'
     },
     userIcon: {
-        marginLeft: 140,
+        marginLeft: 100,
         color: "#024F85"
     }
 

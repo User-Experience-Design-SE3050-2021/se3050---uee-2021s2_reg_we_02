@@ -10,11 +10,9 @@ const styles = StyleSheet.create({
     },
     container2: {
         backgroundColor: "#FFFFFF",
-        height: 670,
+        height: 730,
         width: '100%',
         paddingBottom: 50,
-
-
     },
     container3: {
         marginTop: '1%',
@@ -36,8 +34,8 @@ const styles = StyleSheet.create({
         height: 45,
         marginBottom: 5,
         marginTop: 10,
-        marginLeft: 70,
-        marginRight: 10
+        marginLeft: 40,
+        marginRight: 20
     },
     inputTitle: {
         marginTop: 5,
@@ -78,7 +76,7 @@ const styles = StyleSheet.create({
     },
     Heading: {
         fontSize:27,
-        marginLeft: 75,
+        marginLeft: 40,
         color: "#024F85",
         fontWeight : "bold",
         marginTop:20,
@@ -88,7 +86,7 @@ const styles = StyleSheet.create({
         alignContent: "flex-start",
         marginBottom: 5,
         marginTop: 10,
-        marginLeft: 10,
+        marginLeft: 20,
         color: '#F79605',
 
     },
@@ -176,7 +174,7 @@ const styles = StyleSheet.create({
 
     },
     bottomNavBar: {
-        marginTop: 5,
+        marginTop: 10,
         flexDirection: 'row',
         alignItems: "center",
         backgroundColor: "#F2E8E8",
@@ -192,7 +190,7 @@ const styles = StyleSheet.create({
         color: '#F79605'
     },
     userIcon: {
-        marginLeft: 140,
+        marginLeft: 100,
         color: "#024F85"
     },
     postText: {
@@ -220,11 +218,11 @@ const styles = StyleSheet.create({
     },
     image2: {
         height: 60,
-        width: 80,
+        width: 60,
         marginLeft: 10,
         marginTop: 5,
         marginBottom: 5,
-        marginRight: 20
+        marginRight: 45
     },
     image3: {
         height: 60,
@@ -236,11 +234,16 @@ const styles = StyleSheet.create({
     adDetails: {
         marginRight: 50
     },
-    adButtons: {
-
+    adDetailsImage2: {
+        marginRight: 15
     },
     editIcon: {
-        marginRight: 20,
+        marginRight: 30,
+        marginTop: 20,
+        color: "#F79605"
+    },
+    editIconImage2: {
+        marginRight: 50,
         marginTop: 20,
         color: "#F79605"
     },
@@ -249,8 +252,6 @@ const styles = StyleSheet.create({
         marginTop: 10,
         color: "#F90F0F"
     }
-
-
 });
 
 export default styles;
