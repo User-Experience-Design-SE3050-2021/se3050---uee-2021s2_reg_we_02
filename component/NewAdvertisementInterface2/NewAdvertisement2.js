@@ -10,10 +10,14 @@ export default function NewAdvertisement2({navigation}){
 
     };
     const categoryPage = () =>{
-        navigation.push('Category');
+        navigation.push('CategoryView');
+    };
+    const DashBoard =() =>{
+        navigation.push('DashBoard');
+    };
+    const profile = () => {
+        navigation.push('Profile')
     }
-
-
     const [selectedValue, setSelectedValue] = useState("choose");
     const [selectedValueCondition, setSelectedValueCondition] = useState("choose");
     return (
@@ -84,9 +88,9 @@ export default function NewAdvertisement2({navigation}){
                     <Text style={styles.numberSliderThree}>3</Text>
                 </View>
                 <View style={styles.bottomNavBar}>
-                    <Icon name="home" size={40} style={styles.homeIcon}/>
+                    <Icon onPress={DashBoard} name="home" size={40} style={styles.homeIcon}/>
                     <Icon onPress={categoryPage} name="plus-circle" size={40} style={styles.plusIcon}/>
-                    <Icon name="user" size={40} style={styles.userIcon}/>
+                    <Icon onPress={profile} name="user" size={40} style={styles.userIcon}/>
                 </View>
 
 

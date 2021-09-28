@@ -6,6 +6,9 @@ import styles from "./styles";
 export default function Index ({navigation}){
     const DashBoard =() =>{
         navigation.push('DashBoard');
+    };
+    const logout = () => {
+        navigation.push('Login')
     }
     return(
         <View style={styles.indexContainer}>
@@ -58,6 +61,7 @@ export default function Index ({navigation}){
 
             </View>
             <Button
+                onPress={logout}
                 title="Log out"
                 color="#024F85"
                 size ={30}
