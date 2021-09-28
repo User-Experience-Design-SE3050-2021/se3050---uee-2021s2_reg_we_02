@@ -3,7 +3,7 @@ import styles from './styles';
 import {Image, ScrollView, Text, TextInput, View} from "react-native";
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-
+//category view
 export default function CategoryView({navigation}){
         const nextPage = () =>{
             navigation.push('NewAdvertisement1');
