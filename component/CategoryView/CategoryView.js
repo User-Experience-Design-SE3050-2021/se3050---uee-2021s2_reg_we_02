@@ -7,8 +7,13 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 export default function CategoryView({navigation}){
         const nextPage = () =>{
             navigation.push('NewAdvertisement1');
-
-        }
+        };
+    const DashBoard =() =>{
+        navigation.push('DashBoard');
+    };
+    const profile = () => {
+        navigation.push('Profile')
+    }
         return (
             <View style={styles.container}>
                 <View style={styles.container2}>
@@ -226,9 +231,9 @@ export default function CategoryView({navigation}){
                         <Text style={styles.numberSliderThree}>3</Text>
                     </View>
                     <View style={styles.bottomNavBar}>
-                        <Icon name="home" size={40} style={styles.homeIcon}/>
+                        <Icon onPress={DashBoard} name="home" size={40} style={styles.homeIcon}/>
                         <Icon name="plus-circle" size={40} style={styles.plusIcon}/>
-                        <Icon name="user" size={40} style={styles.userIcon}/>
+                        <Icon onPress={profile} name="user" size={40} style={styles.userIcon}/>
                     </View>
 
 
