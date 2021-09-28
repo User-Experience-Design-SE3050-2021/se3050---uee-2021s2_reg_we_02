@@ -5,6 +5,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 
 export default function NewAdvertisement({navigation}){
+    //Next Page
     const nextPage = () =>{
         navigation.push('NewAdvertisement2');
     };
