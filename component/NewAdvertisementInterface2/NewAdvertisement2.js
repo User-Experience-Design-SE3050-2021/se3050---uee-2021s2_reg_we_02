@@ -5,8 +5,16 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 
 export default function NewAdvertisement2({navigation}){
+    const [Name, setName] = React.useState('');
+    const [Phone, setPhone] = React.useState('');
+    const [Email, setEmail] = React.useState('');
     const nextPage = () =>{
-        navigation.push('OngoingAds');
+        if(Name != '' && Phone != '' && Email!= ''){
+            navigation.push('OngoingAds');
+        }else{
+            alert('An entry is required or has an invalid value. Please correct and try again');
+        }
+
 
     };
     const categoryPage = () =>{
@@ -18,8 +26,7 @@ export default function NewAdvertisement2({navigation}){
     const profile = () => {
         navigation.push('Profile')
     }
-    const [selectedValue, setSelectedValue] = useState("choose");
-    const [selectedValueCondition, setSelectedValueCondition] = useState("choose");
+
     return (
         <View style={styles.container}>
             <View style={styles.container2}>
@@ -40,6 +47,8 @@ export default function NewAdvertisement2({navigation}){
                 <View style={styles.container3}>
                         <View style={styles.inputTitle}>
                             <TextInput
+                                value={Name}
+                                onChangeText={(Name) => setName(Name)}
                                 style={styles.adInput}
                                 placeholder="Name*"
                                 placeholderTextColor="#003f5c"
@@ -53,6 +62,8 @@ export default function NewAdvertisement2({navigation}){
                         </View>
                         <View style={styles.inputTitle}>
                             <TextInput
+                                value={Phone}
+                                onChangeText={(Phone) => setPhone(Phone)}
                                 style={styles.adInput}
                                 placeholder="Phone Number(s)*"
                                 placeholderTextColor="#003f5c"
@@ -66,6 +77,8 @@ export default function NewAdvertisement2({navigation}){
                         </View>
                         <View style={styles.inputTitle}>
                             <TextInput
+                                value={Email}
+                                onChangeText={(Email) => setEmail(Email)}
                                 style={styles.adInput}
                                 placeholder="Email*"
                                 placeholderTextColor="#003f5c"

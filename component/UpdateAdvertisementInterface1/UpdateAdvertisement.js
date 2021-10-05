@@ -5,8 +5,15 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 
 export default function UpdateAdvertisement({navigation}){
+    const [Title, setTitle] = React.useState('');
+    const [Description, setDescription] = React.useState('');
     const nextPage = () =>{
-        navigation.push('UpdateAdvertisement2');
+        if(Title != '' && Description != ''){
+            navigation.push('UpdateAdvertisement2');
+        }else{
+            alert('An entry is required or has an invalid value. Please correct and try again')
+        }
+
     };
     const categoryPage = () =>{
         navigation.push('CategoryView');
@@ -71,6 +78,8 @@ export default function UpdateAdvertisement({navigation}){
                         </View>
                         <View style={styles.inputTitle}>
                             <TextInput
+                                value={Title}
+                                onChangeText={(Title) => setTitle(Title)}
                                 style={styles.adInput}
                                 placeholder="iPhone X"
                                 placeholderTextColor="#003f5c"
@@ -90,6 +99,8 @@ export default function UpdateAdvertisement({navigation}){
 
                         <View style={styles.descriptionView}>
                             <TextInput
+                                value={Description}
+                                onChangeText={(Description) => setDescription(Description)}
                                 style={styles.adInput}
                                 placeholder="Original Apple iPhone X
 Factory Unlocked

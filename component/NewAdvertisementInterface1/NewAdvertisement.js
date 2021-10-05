@@ -5,8 +5,20 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 
 export default function NewAdvertisement({navigation}){
+    const [selectedValue, setSelectedValue] = useState("choose");
+    const [selectedValueCondition, setSelectedValueCondition] = useState("choose");
+    const [Title, setTitle] = React.useState('');
+    const [Description, setDescription] = React.useState('');
+    const [Price, setPrice] = React.useState('');
+
+
     const nextPage = () =>{
-        navigation.push('NewAdvertisement2');
+        if(Title != '' && Description != ''){
+            navigation.push('NewAdvertisement2');
+        }else{
+            alert('An entry is required or has an invalid value. Please correct and try again')
+        }
+
     };
     const categoryPage = () =>{
         navigation.push('CategoryView');
@@ -19,9 +31,6 @@ export default function NewAdvertisement({navigation}){
     }
 
 
-
-    const [selectedValue, setSelectedValue] = useState("choose");
-    const [selectedValueCondition, setSelectedValueCondition] = useState("choose");
     return (
         <View style={styles.container}>
             <View style={styles.container2}>
@@ -72,6 +81,8 @@ export default function NewAdvertisement({navigation}){
                         </View>
                         <View style={styles.inputTitle}>
                             <TextInput
+                                value={Title}
+                                onChangeText={(Title) => setTitle(Title)}
                                 style={styles.adInput}
                                 placeholder="Title*"
                                 placeholderTextColor="#003f5c"
@@ -91,6 +102,8 @@ export default function NewAdvertisement({navigation}){
 
                         <View style={styles.descriptionView}>
                             <TextInput
+                                value={Description}
+                                onChangeText={(Description) => setDescription(Description)}
                                 style={styles.adInput}
                                 placeholder="Write a description"
                                 placeholderTextColor="#003f5c"
@@ -98,6 +111,8 @@ export default function NewAdvertisement({navigation}){
                         </View>
                         <View style={styles.inputTitle}>
                             <TextInput
+                                value={Price}
+                                onChangeText={(Price) => setPrice(Price)}
                                 style={styles.adInput}
                                 placeholder="Price*"
                                 placeholderTextColor="#003f5c"
@@ -116,7 +131,7 @@ export default function NewAdvertisement({navigation}){
                 </View>
                     </ScrollView>
 
-                <View style={styles.numberSlider}>
+                    <View style={styles.numberSlider}>
                     <Text style={styles.numberSliderOne}>1</Text>
                     <Text style={styles.numberSliderTwo}>2</Text>
                     <Text onPress={nextPage} style={styles.numberSliderThree}>3</Text>
