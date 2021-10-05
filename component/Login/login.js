@@ -9,27 +9,32 @@ import {
 } from 'react-native'
 import { Button } from 'react-native-paper'
 
-export default function login({navigation}) {
-  const [Email, onChangeEmail] = React.useState(null)
-  const [Password, onChangePassword] = React.useState(null)
-
+export default function login({ navigation }) {
+  const [Email, onChangeEmail] = React.useState('')
+  const [Password, onChangePassword] = React.useState('')
 
   const forgotpassword = () => {
-    navigation.push('Forgetpassword');
+    navigation.push('Forgetpassword')
   }
   const signup = () => {
-    navigation.push('Signup');
+    navigation.push('Signup')
   }
   const DashBoard = () => {
-    navigation.push('DashBoard');
+    if (Email != '' && Password != '') {
+      navigation.push('DashBoard')
+    } else {
+      alert('please enter valid details')
+    }
   }
-  
 
   return (
     <View style={styles.container}>
       <View style={styles.logoContainer}>
         <Text style={styles.welcomeText}>Welcome !</Text>
-        <Image source={require('../../mainlogo.jpg')} style={styles.mainlogo}></Image>
+        <Image
+          source={require('../../mainlogo.jpg')}
+          style={styles.mainlogo}
+        ></Image>
       </View>
       <View style={styles.BackgroungContainer}>
         <ImageBackground
@@ -43,8 +48,8 @@ export default function login({navigation}) {
             value={Email}
           />
           <TextInput
+            secureTextEntry={true}
             style={styles.input2}
-            type="password"
             onChangeText={onChangePassword}
             placeholder="Password"
             value={Password}
@@ -61,17 +66,11 @@ export default function login({navigation}) {
             </Button>
           </View>
           <View style={styles.below}>
-            <Text
-              style={styles.belowText1}
-              onPress={forgotpassword}
-            >
+            <Text style={styles.belowText1} onPress={forgotpassword}>
               Forget Password?
             </Text>
             <View style={styles.verticleLine}></View>
-            <Text
-              style={styles.belowText2}
-              onPress={signup}
-            >
+            <Text style={styles.belowText2} onPress={signup}>
               Create Account!
             </Text>
           </View>
@@ -84,7 +83,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     zIndex: 0,
-    backgroundColor: '#fff'
+    backgroundColor: '#fff',
   },
   logoContainer: {
     flex: 0.2,

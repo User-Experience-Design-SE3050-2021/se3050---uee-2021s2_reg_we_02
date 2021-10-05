@@ -9,11 +9,18 @@ import {
 } from 'react-native'
 import { Button } from 'react-native-paper'
 
-export default function signup({navigation}) {
-  const [Email, onChangeEmail] = React.useState(null)
-  const [Password, onChangePassword] = React.useState(null)
-  const [RePassword, onChangeRePassword] = React.useState(null)
+export default function signup({ navigation }) {
+  const [Email, onChangeEmail] = React.useState('')
+  const [Password, onChangePassword] = React.useState('')
+  const [RePassword, onChangeRePassword] = React.useState('')
 
+  const DashBoard = () => {
+    if (Email != '' && Password != '' && RePassword != '') {
+      navigation.push('Login')
+    } else {
+      alert('please enter valid details')
+    }
+  }
   return (
     <View style={styles.container}>
       <View style={styles.logoContainer}>
@@ -28,7 +35,8 @@ export default function signup({navigation}) {
         >
           <View style={styles.topic}>
             <Text style={styles.topictext}>
-              With Your New Account, {"\n"} You Can Take Advantage Of All {"\n"} The Benefits
+              With Your New Account, {'\n'} You Can Take Advantage Of All {'\n'}{' '}
+              The Benefits
             </Text>
           </View>
 
@@ -39,15 +47,15 @@ export default function signup({navigation}) {
             value={Email}
           />
           <TextInput
+            secureTextEntry={true}
             style={styles.input2}
-            type="password"
             onChangeText={onChangePassword}
             placeholder="Password(Use:'#' ,'@','*','1')"
             value={Password}
           />
           <TextInput
+            secureTextEntry={true}
             style={styles.input2}
-            type="password"
             onChangeText={onChangeRePassword}
             placeholder="Re-Password(Use:'#' ,'@','*','1')"
             value={RePassword}
@@ -59,7 +67,7 @@ export default function signup({navigation}) {
               compact="true"
               color="#fff"
               mode="contained"
-              onPress={() => console.log('Pressed')}
+              onPress={DashBoard}
             >
               SIGNUP
             </Button>

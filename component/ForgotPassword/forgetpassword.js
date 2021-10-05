@@ -10,9 +10,16 @@ import {
 import { Button } from 'react-native-paper'
 
 export default function forgot({ navigation }) {
-  const [Email, onChangeEmail] = React.useState(null)
+  const [Email, onChangeEmail] = React.useState('')
 
-  
+  const DashBoard = () => {
+    if (Email != '') {
+      navigation.push('Login');
+    } else {
+       alert('please enter valid details')
+    }
+    
+  }
 
   return (
     <View style={styles.container}>
@@ -51,7 +58,7 @@ export default function forgot({ navigation }) {
               compact="true"
               color="#fff"
               mode="contained"
-              onPress={() => console.log('Pressed')}
+              onPress={DashBoard}
             >
               SUBMIT
             </Button>
