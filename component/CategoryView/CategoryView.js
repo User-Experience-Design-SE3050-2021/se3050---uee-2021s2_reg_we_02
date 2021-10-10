@@ -8,12 +8,12 @@ export default function CategoryView({navigation}){
         const nextPage = () =>{
             navigation.push('NewAdvertisement1');
         };
-    const DashBoard =() =>{
-        navigation.push('DashBoard');
-    };
-    const profile = () => {
-        navigation.push('Profile')
-    }
+        const DashBoard =() =>{
+            navigation.push('DashBoard');
+        };
+        const profile = () => {
+            navigation.push('Profile')
+        }
         return (
             <View style={styles.container}>
                 <View style={styles.container2}>

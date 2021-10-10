@@ -1,15 +1,23 @@
-import * as React from 'react';
-import {View,Image,Text,Button } from 'react-native';
+import React from 'react';
+import {View,Image,Text,TextInput,Button } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome'
 import styles from "./styles";
 
 export default function Index ({navigation}){
     const DashBoard =() =>{
-        navigation.push('DashBoard');
-    };
+        if(name != '' && email != '' & mobile != ''){
+            navigation.push('DashBoard');
+        }else{
+            alert('Inpult Fields Can Not Be Emprty.!');
+        }
+        
+    }
     const logout = () => {
         navigation.push('Login')
     }
+    const [name,nameChange] = React.useState('Maleesha Suraj');
+    const [email,emailChange] = React.useState('malisha2019@gmail.com');
+    const [mobile,mobileChange] = React.useState('+94756299785');
     return(
         <View style={styles.indexContainer}>
             <View style={styles.Row}>
@@ -22,7 +30,10 @@ export default function Index ({navigation}){
             <View style={styles.Row}>
                 <Text style={styles.RowValuesTopic}>Name</Text>
                 <View style={styles.RowValues}>
-                    <Text style={styles.RowValuesText}>Maleesha Suraj</Text>
+                    <TextInput style={styles.RowValuesText}
+                        onChangeText={nameChange}
+                        value={name}
+                    />
                     <Icon style={styles.RowValuesIcon} name={"edit"} size={20}/>
                 </View>
             </View>
@@ -38,7 +49,10 @@ export default function Index ({navigation}){
             <View style={styles.Row}>
                 <Text style={styles.RowValuesTopic}>Email</Text>
                 <View style={styles.RowValues}>
-                    <Text style={styles.RowValuesText}>maleesha@gmail.com</Text>
+                    <TextInput style={styles.RowValuesText}
+                        onChangeText={emailChange}
+                        value={email}
+                    />
                     <Icon style={styles.RowValuesIcon} name={"edit"} size={20}/>
                 </View>
             </View>
@@ -46,7 +60,10 @@ export default function Index ({navigation}){
             <View style={styles.RowII}>
                 <Text style={styles.RowValuesTopic}>Mobile</Text>
                 <View style={styles.RowValues}>
-                    <Text style={styles.RowValuesText}>+94756299785</Text>
+                    <TextInput style={styles.RowValuesText}
+                        onChangeText={mobileChange}
+                        value={mobile}
+                    />
                     <Icon style={styles.RowValuesIcon} name={"edit"} size={20}/>
                 </View>
             </View>

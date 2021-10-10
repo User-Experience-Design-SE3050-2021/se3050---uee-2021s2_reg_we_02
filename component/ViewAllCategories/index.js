@@ -42,7 +42,7 @@ export default function Index ({navigation}){
             </View>
 
             <View style={styles.body}>
-                <ScrollView>
+                <ScrollView style={styles.scrollView}>
                     <TouchableHighlight  underlayColor={"COLOR"} >
                         <View style={styles.MainCatItem}>
                             <Image style={styles.TopRankingImg}  source={require("../../assets/images/bike.png")}/>

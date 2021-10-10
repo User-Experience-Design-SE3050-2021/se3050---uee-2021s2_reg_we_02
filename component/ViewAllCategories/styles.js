@@ -1,6 +1,10 @@
 import { StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
+    scrollView: {
+        backgroundColor: 'pink',
+        marginRight:10
+    },
     indexContainer:{
         flex: 1,
         backgroundColor: '#fff',
@@ -34,7 +38,6 @@ const styles = StyleSheet.create({
         backgroundColor:'#dbd7d7',
         shadowOpacity: 0.53,
         shadowRadius: 13.97,
-        elevation: 21,
         opacity:0.9
     },
     filterViewDistrict:{
@@ -49,7 +52,6 @@ const styles = StyleSheet.create({
         backgroundColor:'#dbd7d7',
         shadowOpacity: 0.53,
         shadowRadius: 13.97,
-        elevation: 21,
         opacity:0.9
     },
     filterViewProvinceText:{
@@ -78,13 +80,23 @@ const styles = StyleSheet.create({
         },
         shadowOpacity: 0.53,
         shadowRadius: 13.97,
-        elevation: 21,
         borderRadius:10
     },
     TopRankingImgII:{
+        backgroundColor:'#fff',
         margin:10,
         width:100,
-        height:100
+        height:100,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 10,
+        },
+        shadowOpacity: 0.53,
+        shadowRadius: 13.97,
+        borderRadius:10,
+        borderWidth:0.5,
+        borderColor:'#000'
     },
     Topic:{
         paddingTop:7,
